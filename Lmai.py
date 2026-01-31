@@ -2,7 +2,7 @@
 import speech_recognition as sr
 #ใช้ในการรันคำสั่งในระบบปฏิบัติการ
 import subprocess
-RIOT_CLIENT = r"C:\Riot Games\Riot Client\RiotClientServices.exe"
+RIOT_CLIENT = r"Your RiotClientServices.exe"
 COMMANDS = {
     "แอลไหม": [
         RIOT_CLIENT,
@@ -31,7 +31,7 @@ while True:
 
     try:
         text = recognizer.recognize_google(audio, language="th-TH")
-        print(f"คุณพูดว่า: {text}")
+        print(f"You say: {text}")
 
         for command, path in COMMANDS.items():
             if command in text:
